@@ -1,11 +1,14 @@
 #学习springboot自动装配
 
 ##一、手动装配
+
 ###1、模式注解装配
+
 @Component注解，或者@Component注解的拓展，
 @Controller、@Service、Repository、@Configruation等，
 
 ###2.@Configuration启动容器+@Bean注册Bean 
+
 从Spring3.0，@Configuration用于定义配置类，可替换xml配置文件，
 被注解的类内部包含有一个或多个被@Bean注解的方法，
 这些方法将会被AnnotationConfigApplicationContext或AnnotationConfigWebApplicationContext类进行扫描，
@@ -17,6 +20,7 @@
 3. 嵌套的configuration必须是静态类。
 
 ###3、@Enable模块装配（@Import）
+
 基于接口驱动实现
 
 例如：添加@EnableAsync注解就可以使用@Async注解的异步方法操作。
@@ -63,12 +67,14 @@ import 注解是什么意思呢？联想到xml形式下有一个<import resource
 
 import 就是把多个分来的容器配置合并在一个配置中。在JavaConfig 中所表达的意义是一样的。
 
-@Import 注解可以配置三种不同的 class
+@Import 注解可以配置三种不同的 class：
+
 1. 基于普通 bean 或者带有@Configuration 的 bean 
 2. 实现 ImportSelector 接口进行动态注入
 3. 实现 ImportBeanDefinitionRegistrar 接口进行动态注入。
 
 ###3、条件装配
+
 条件装配，其实是Bean装配的前置条件，使用@Conditional注解。
 @Conditional是Spring4新提供的注解，它的作用是按照一定的条件进行判断，满足条件给容器注册bean。
 Condition是个接口，需要实现matches方法，返回true则注入bean，false则不注入。
@@ -156,6 +162,7 @@ org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchAutoConfi
 
 
 ##什么是 Starter
+
 Starter是Spring Boot中的一个非常重要的概念，Starter相当于模块，它能将模块所需的依赖整合起来并对模块内的 Bean 根据环境（ 条件）进行自动配置。使用者只需要依赖相应功能的 Starter，无需做过多的配置和依赖，Spring Boot 就能自动扫描并加载相应的模块。
 
 例如：在 Maven 的依赖中加入 spring-boot-starter-web 就能使项目支持 Spring MVC，并且 Spring Boot 还为我们做了很多默认配置，
@@ -164,6 +171,7 @@ SpringBoot 存在很多开箱即用的 Starter 依赖，使得我们在开发业
  
  
 ###Starter的命名
+
 官方对Starter项目的jar包定义的 artifactId 是有要求的，当然也可以不遵守。
 Spring官方Starter通常命名为spring-boot-starter-{name}如：spring-boot-starter-web，
 Spring官方建议非官方的starter命名应遵守{name}-spring-boot-starter的格式。
