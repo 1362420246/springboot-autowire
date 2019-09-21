@@ -1,1 +1,1 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.qbk.autocinfigure.StarterAutoConfigure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.kk.autocinfigure.StarterAutoConfigure

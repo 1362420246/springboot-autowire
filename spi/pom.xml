@@ -32,6 +32,19 @@
 			<artifactId>ysc-spring-boot-starter</artifactId>
 			<version>1.0.0</version>
 		</dependency>
+
+		<dependency>
+			<groupId>com.qbk</groupId>
+			<artifactId>import</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.qbk</groupId>
+			<artifactId>conditional</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

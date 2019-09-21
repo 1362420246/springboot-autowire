@@ -1,4 +1,4 @@
-package com.qbk.autocinfigure;
+package com.kk.autocinfigure;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;

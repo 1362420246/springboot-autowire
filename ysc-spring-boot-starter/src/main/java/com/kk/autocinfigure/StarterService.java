@@ -1,4 +1,4 @@
-package com.qbk.autocinfigure;
+package com.kk.autocinfigure;
 
 import org.springframework.util.StringUtils;
 
