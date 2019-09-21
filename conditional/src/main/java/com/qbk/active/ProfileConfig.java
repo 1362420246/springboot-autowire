@@ -6,8 +6,10 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
 
+/**
+ * 按照指定环境装配bean
+ */
 @Configuration
-//指定环境
 @Profile({ "dev" })
 public class ProfileConfig {
 

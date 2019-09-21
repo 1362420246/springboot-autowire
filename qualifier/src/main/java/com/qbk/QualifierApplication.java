@@ -11,6 +11,9 @@ import java.lang.annotation.*;
 import java.util.Collections;
 import java.util.Map;
 
+/**
+ * 学习@Qualifier注解及其衍生注解的学习
+ */
 @SpringBootApplication
 public class QualifierApplication {
 

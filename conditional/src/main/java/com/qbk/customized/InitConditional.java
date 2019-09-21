@@ -8,6 +8,9 @@ import org.springframework.context.annotation.ConditionContext;
 import org.springframework.core.env.Environment;
 import org.springframework.core.type.AnnotatedTypeMetadata;
 
+/**
+ * 实现Condition接口
+ */
 public class InitConditional implements Condition {
 
     /**

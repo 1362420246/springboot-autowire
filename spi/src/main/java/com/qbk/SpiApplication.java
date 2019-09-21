@@ -12,17 +12,32 @@ import org.springframework.context.annotation.Bean;
 
 import java.util.Arrays;
 
+/**
+ * 验证 自定义starter项目
+ */
 @SpringBootApplication
 public class SpiApplication {
 
+	/**
+	 * 来自ysc-spring-boot-starter项目，自动装配，
+	 * 他的package不在本项目的主路径上，如果不配置spring.factories无法加载
+	 */
 	@Autowired
 	private StarterService starterService;
 
+	/**
+	 * 来自import项目，能装配是因为他的package在本项目的主路径上
+	 */
 	@Autowired
 	private RootBean rootBean;
 
+	/**
+	 * 来自conditional项目，
+	 * 能装配是因为他的package在本项目的主路径上
+	 * 并且在本项目配置文件中配置了装配条件
+	 */
 	@Autowired
-	protected BpiBean bpiBean;
+	private BpiBean bpiBean;
 
 	@Autowired
 	private String webBean;

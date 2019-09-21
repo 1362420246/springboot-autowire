@@ -2,6 +2,9 @@ package com.kk.autocinfigure;
 
 import org.springframework.util.StringUtils;
 
+/**
+ * 被注入的bean
+ */
 public class StarterService {
 
     private String config;

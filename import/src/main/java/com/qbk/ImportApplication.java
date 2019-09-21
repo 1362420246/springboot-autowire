@@ -8,6 +8,9 @@ import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
 
+/**
+ * 基于@Import注解装配bean
+ */
 @SpringBootApplication
 public class ImportApplication {
 

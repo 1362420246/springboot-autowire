@@ -6,6 +6,9 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * 初始化List的不同方式
+ */
 public class Test {
     static class User{
         private Integer id;

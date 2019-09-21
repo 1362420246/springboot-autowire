@@ -6,6 +6,9 @@ import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
 
+/**
+ * 条件装配学习demo
+ */
 @SpringBootApplication
 public class ConditionalApplication {
 

@@ -9,6 +9,13 @@ import org.springframework.context.annotation.Bean;
 
 import java.util.Arrays;
 
+/**
+ * 自定义 Starter项目
+ * 通过resources\META-INF\spring.factories中
+ * org.springframework.boot.autoconfigure.EnableAutoConfiguration作为key
+ * 添加指定的@Configuration配置类
+ * 其他项目引入就自动注入@Configuration配置中的bean
+ */
 @SpringBootApplication
 public class YscSpringBootStarterApplication {
 
