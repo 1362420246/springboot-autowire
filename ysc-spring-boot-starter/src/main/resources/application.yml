@@ -2,3 +2,12 @@ example:
   service:
     enabled: true
     config: abc-des-dde,SSS-DRS-RE,SDR-SDFR-XXX
+server:
+  port: 8011
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/db01?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver

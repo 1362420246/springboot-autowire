@@ -1,6 +1,7 @@
 package com.qbk;
 
 import com.kk.autocinfigure.StarterService;
+import com.kk.mapper.TbUserMaper;
 import com.qbk.onBean.BpiBean;
 import com.qbk.selector.RootBean;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,12 +10,16 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * 验证 自定义starter项目
  */
+@RestController
 @SpringBootApplication
 public class SpiApplication {
 
@@ -59,6 +64,24 @@ public class SpiApplication {
 	@ConditionalOnWebApplication
 	public String webBean(){
 		return "web";
+	}
+
+	@GetMapping("/get")
+	public String[] get(){
+		return starterService.split(",");
+	}
+
+	/**
+	 * 虽然通过spi引入的是ysc项目中的mapper，但最终走的是本项目的mysql连接
+	 * 当两个项目都存在mybatis、mysql时不会共存，会覆盖数据源
+	 * 当把本项目中的mybatis、mysql依赖删除会走ysc中的mysql连接
+	 */
+	@Autowired
+	private TbUserMaper tbUserMaper;
+
+	@GetMapping("/get/list")
+	public List<String> getList(){
+		return tbUserMaper.getList();
 	}
 
 	public static void main(String[] args) {

@@ -1,5 +1,6 @@
 package com.kk.autocinfigure;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -12,6 +13,7 @@ import org.springframework.context.annotation.Configuration;
  * 自动装配的  @Configuration
  */
 @Configuration
+@MapperScan("com.kk.mapper")//只要是在这个config下扫描的bean都会通过spi被引入项目加载
 @ConditionalOnClass(StarterService.class)
 @EnableConfigurationProperties(StarterServiceProperties.class)
 public class StarterAutoConfigure {
