@@ -20,6 +20,7 @@
 	<modules>
 		<module>import</module>
 		<module>conditional</module>
+		<module>qualifier</module>
 		<module>spi</module>
 		<module>ysc-spring-boot-starter</module>
 	</modules>
